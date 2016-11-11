@@ -11,13 +11,13 @@ io.on('connection', function(socket){
 
     console.log('client connected, broadcasting spawn, id:', thisClientId);
 
-    socket.broadcast.emit('spawn');
+    socket.broadcast.emit('spawn', { id: thisClientId });
     playerCount++;
 
-    for(i=0;i<playerCount;i++){
-        socket.emit('spawn');
-        console.log('sending spawn to the new player');
-    }
+   for(i=0;i<playerCount;i++){
+       socket.emit('spawn', { id: thisClientId });
+       console.log('sending spawn to connected clients');
+   }
 
     socket.on('move', function(data) {
         data.id = thisClientId;
