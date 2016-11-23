@@ -1,12 +1,17 @@
 //SteamVR Social Nodejs server
-var io = require('socket.io')(process.env.PORT || 3000);
+var express = require('express'),
+    app = express(),
+    server = require('http').createServer(app),
+    io = require('socket.io').listen(server);
+server.listen(process.env.PORT || 3000);
+
 var shortid = require('shortid');
 
 console.log('server started');
 
 var players=[];
 
-io.on('connection', function(socket){
+io.sockets.on('connection', function(socket){
     var thePlayerId = shortid.generate();
     
     players.push(thePlayerId);
