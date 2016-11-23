@@ -1,0 +1,26 @@
+{
+  "name": "veidax-server",
+  "version": "0.1.0",
+  "description": "The backend server for the VeidaX Playground",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/veidalab/veidax-server.git"
+  },
+  "keywords": [
+    "VR"
+  ],
+  "author": "Brad Stimpson",
+  "license": "MPL-2.0",
+  "bugs": {
+    "url": "https://github.com/veidalab/veidax-server/issues"
+  },
+  "homepage": "https://github.com/veidalab/veidax-server#readme",
+  "dependencies": {
+    "socketio": "^1.0.0"
+  }
+}
