@@ -1,3 +1,10 @@
 language: node_js
 node_js:
-    - "5.4"
+- '5.4'
+deploy:
+  provider: heroku
+  api_key:
+    secure: YYl1eNRpBYVr1QV+FlIOjdkv/iktjEAfPefef6lpR2MCShmqPElYDEaasnRzbqwvZhHtVU67t8mgYE+IbHbaWGGDyhHD6t3AgEZva7FvLGfb7QZy+/g5wIGwjs5tKy0hOpq8Syf7mjgxi/GOPV0cUP4scqYkZoXaS19ZyeVmSfW0nr6CoYkgwrNtZxV1X2ElG3mK1CG8v4uFI06Ou4VH9O8X6XzOBxsmdquLmAFZD5XnZMS4CFsU58wRn9gSUbNm4nDWgwW1E1jv5PL2vHXHGxfr4Q+tpTD4Lj6ajXgvz3nt/MxcSMxs/9UOvq2X81F3UUWRcipoUfLB3hMmUS8q60st280YKTSnHEiEkUp0iDBIusGzzRMmvYZEPMfcyavnXJu4t5jQQBHhAygRGItWRYh6LrWTxtTMnJOnE7V+yMWvhO7+/qAVCgNAYchYvEEtDlEeFBioa5PCrwPwkeUPstEQqixdCdJZ9cHxpAZJ3TMGQOueQl7UicTXU2IeXckHpmdqvXBISdHmaM3f3elV0U6QBbTIJd67n8RWBpIiCKaxg/eFjAVoc7VJh97BmhAtJactwuRU6knrYtfmbS/pjQbHS5kMtTlIfwGMK70FmmJ1G6GzzUXvbSADMi9xxpfEP6LxNbbfED79Cf+4p3ObZcmBOo8mcZ47MzVgDP9/XHU=
+  app: rocky-spire-37199
+  on:
+    repo: veidalab/veidax-server
